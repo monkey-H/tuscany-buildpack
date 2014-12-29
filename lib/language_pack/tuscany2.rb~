@@ -1,5 +1,6 @@
 require "language_pack/java"
 require "fileutils"
+require "pathname"
 
 module LanguagePack
   class Tuscany2 < Java
@@ -47,6 +48,7 @@ module LanguagePack
       FileUtils.rm_rf tuscany_tarball
       puts "tuscanydir #{tuscany_dir}"
       puts "tuscanyverison #{TUSCANY_VERSION}"
+      puts Pathname.new(_FILE_).realpath
       unless File.exists?("#{tuscany_dir}/#{TUSCANY_VERSION}/bin/tuscany.sh")
         puts "unable to retrieve Tuscany"
         exit 1
