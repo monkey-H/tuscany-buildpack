@@ -47,11 +47,14 @@ module LanguagePack
       
       FileUtils.rm_rf tuscany_tarball
 	  puts "dir: #{Dir.pwd}"
-	  puts _FILE_
-	  puts File.dirname(_FILE_)
-      puts "tuscanydir #{tuscany_dir}"
-      puts "tuscanyverison #{TUSCANY_VERSION}"
-      puts Pathname.new(_FILE_).realpath
+	  Dir.entries(Dir.pwd).each{
+	  	|e| puts e
+	  }
+	  #puts _FILE_
+	  #puts File.dirname(_FILE_)
+      #puts "tuscanydir #{tuscany_dir}"
+      #puts "tuscanyverison #{TUSCANY_VERSION}"
+      #puts Pathname.new(_FILE_).realpath
       unless File.exists?("#{tuscany_dir}/#{TUSCANY_VERSION}/bin/tuscany.sh")
         puts "unable to retrieve Tuscany"
         exit 1
