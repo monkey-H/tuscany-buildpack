@@ -45,6 +45,8 @@ module LanguagePack
       run_with_err_output("tar zxf #{tuscany_tarball} -C #{tuscany_dir}")
       
       FileUtils.rm_rf tuscany_tarball
+      puts "tuscanydir #{tuscany_dir}"
+      puts "tuscanyverison #{TUSCANY_VERSION}"
       unless File.exists?("#{tuscany_dir}/#{TUSCANY_VERSION}/bin/tuscany.sh")
         puts "unable to retrieve Tuscany"
         exit 1
