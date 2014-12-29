@@ -46,6 +46,9 @@ module LanguagePack
       run_with_err_output("tar zxf #{tuscany_tarball} -C #{tuscany_dir}")
       
       FileUtils.rm_rf tuscany_tarball
+	  puts "dir: #{Dir.pwd}"
+	  puts _FILE_
+	  puts File.dirname(_FILE_)
       puts "tuscanydir #{tuscany_dir}"
       puts "tuscanyverison #{TUSCANY_VERSION}"
       puts Pathname.new(_FILE_).realpath
