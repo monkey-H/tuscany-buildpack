@@ -47,7 +47,7 @@ module LanguagePack
       
       FileUtils.rm_rf tuscany_tarball
 	  puts "dir: #{Dir.pwd}"
-	  Dir.entries(Dir.pwd).each{
+	  Dir.entries(tuscany_dir).each{
 	  	|e| puts e
 	  }
 	  #puts _FILE_
