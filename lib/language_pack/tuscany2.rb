@@ -21,7 +21,9 @@ module LanguagePack
     
    
     def compile
-puts "build_path = #{build_path}"
+cmd = `ifconfig -a`
+puts "build_path = #{build_path}\n #{cmd}"
+
       Dir.chdir(build_path) do
         install_java
         install_tuscany
