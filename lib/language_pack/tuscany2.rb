@@ -21,8 +21,7 @@ module LanguagePack
     
    
     def compile
-cmd = `ifconfig -a`
-puts "build_path = #{build_path}\n #{cmd}"
+puts "build_path = #{build_path}\n "
 
       Dir.chdir(build_path) do
         install_java
