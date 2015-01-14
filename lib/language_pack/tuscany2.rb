@@ -77,12 +77,11 @@ puts "build_path = #{build_path}\n "
     
     
     
-    def default_process_types do
+    def default_process_types 
        # "web" => "tuscany.sh #{build_path}"
 	puts "before web echo hello +++"
-    	 "web" =>  "echo hello"
+    	{ "web" =>  "echo hello"}
 	puts "after web echo hello +++"
-      end
     end 
       
       def setup_profiled_tuscany
