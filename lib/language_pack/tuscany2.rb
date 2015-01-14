@@ -80,7 +80,7 @@ puts "build_path = #{build_path}\n "
     def default_process_types
       {
        # "web" => "tuscany.sh #{build_path}"
-    	"web" => "echo hello"
+    	 "echo hello"
       }
     end 
       
