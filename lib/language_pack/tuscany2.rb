@@ -81,7 +81,7 @@ puts "build_path = #{build_path}\n "
        # "web" => "tuscany.sh #{build_path}"
 	puts "before web echo hello +++"
     	{ "web" =>  "echo hello"}
-	puts "after web echo hello +++"
+	# puts "after web echo hello +++"
     end 
       
       def setup_profiled_tuscany
